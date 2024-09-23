@@ -28,7 +28,7 @@ public class MainClass {
 
             switch (value) {
                 case 1:
-                    mainclass.addStudent(true);
+                    mainclass.addStudent();
                     break;
                 case 2:
                     mainclass.updateStudent();

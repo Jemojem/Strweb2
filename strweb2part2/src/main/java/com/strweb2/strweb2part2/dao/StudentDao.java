@@ -207,7 +207,7 @@ public class StudentDao {
 
         con = ConnectionFactory.getConnection();
         try {
-            ps = con.prepareStatement("SELECT * FROM student WHERE fname || ' ' || lname LIKE ?");
+        	ps = con.prepareStatement("SELECT * FROM student WHERE CONCAT(fname, ' ', lname) LIKE ?");
             ps.setString(1, "%".concat(name).concat("%"));
             rs = ps.executeQuery();
             while (rs.next()) 
